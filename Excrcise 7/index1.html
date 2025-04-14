@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video on TV Screen Only</title>
+  <style>
+    body {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      width: 512px;
+    }
+
+    .tv-image {
+        position: relative;
+      width: 100%;
+      display: block;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 20%;  
+      left: 13%;
+      width: 75%;    /* Adjusted to match TV screen Y position */
+      
+          /* Adjusted to match TV screen X position */
+        /* Height of the TV screen area */
+      object-fit: cover;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="tv.png" alt="TV" class="tv-image">
+  <video src="video-tv-in-0819.m4v" class="video-overlay" autoplay muted loop></video>
+</div>
+
+</body>
+</html>
